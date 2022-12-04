@@ -9,11 +9,7 @@ program
   program.parse(process.argv);
 
 const argv = program.opts();
-
 const contacts = require("./contacts")
-
-
-
 
 const invokeAction = async ({action, id, name, email, phone }) => {
     switch (action) {
@@ -38,8 +34,4 @@ const invokeAction = async ({action, id, name, email, phone }) => {
                     console.log("Unknown action")
     }
 }
-invokeAction(argv)
-// invokeAction({action: "list"})
-// invokeAction({action: "get", id: "5"})
-// invokeAction({action: "remove", id: "5"})
-// invokeAction({action: "add", name: "Petro", email: "petro@ukr.net", phone: "777777"})
+invokeAction(argv);
